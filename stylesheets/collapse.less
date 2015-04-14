@@ -1,0 +1,67 @@
+.collapse{
+  @media(min-width: 720px){
+    .toggle { visibility: hidden }
+    * :not(.toggle){
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+
+  @media (max-width: 720px){
+    display: block;
+    .toggle {
+      visibility: visible;
+    }
+
+    .collapses {
+      visibility: hidden;
+
+      position: absolute;
+      top: @header-height + 10px;
+      width: 140%;
+      left: -20%;
+      margin: 0px;
+      padding: 0px;
+
+      display: block;
+      text-align: center;
+      float: none;
+      z-index: 100;
+
+      li,div:not(.toggle){
+        display: block;
+        padding: 10px;
+        position: relative;
+        width: 100%;
+        left: 0px;
+        border-bottom: 1px solid @clprim2;
+        background: @clprim1;
+
+        &:hover{
+          background: darken(@clprim1, 10%);
+        }
+      }
+    }
+  }
+
+  .rolled-down{
+    visibility: visible;
+    transform-origin: 50% 0;
+    animation: rollDown 0.1s ease-in-out forwards;
+  }
+
+  .rotated{
+    transform-origin: 50% 50%;
+    animation: rotate 0.1s ease-in-out forwards;
+  }
+}
+
+@keyframes rollDown{
+  from { transform: scaleY(0) }
+  to   { transform: scaleY(1) }
+}
+
+@keyframes rotate{
+  from { }
+  to {   transform: rotate(-90deg) }
+}

@@ -1,0 +1,46 @@
+@import 'collapse.less';
+
+header{
+  display: block;
+  height: @header-height;
+  position: relative;
+  border-bottom: 2px solid @clprim2;
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 0px;
+
+  .logo{
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 200px;
+    overflow: visible;
+    color: @clprim3;
+    content: ' ';
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @media (max-width: 2048px) and (min-width: 720px){
+      background-image: image-url('logo.svg');
+    }
+    @media (max-width: 720px){
+      background-image: image-url('logo-sm.svg');
+    }
+  }
+
+  nav {
+    float: right;
+    display: flex;
+    ul {
+      height: 100%;
+      vertical-align: middle;
+    }
+    li {
+      display: inline-block;
+      list-style: none;
+      a { width: 100% }
+    }
+  }
+  .clearfix;
+}
