@@ -1,5 +1,5 @@
 .collapse{
-  @media(min-width: 720px){
+  @media(min-width: @media-bp){
     flex-direction: row-reverse;
     .toggle { visibility: hidden }
     * :not(.toggle){
@@ -8,7 +8,8 @@
     }
   }
 
-  @media (max-width: 720px){
+  @media (max-width: @media-bp) and (min-width: 480px),
+  (max-device-width: 8in){
     flex-direction: row;
     align-items: center;
     .toggle {
