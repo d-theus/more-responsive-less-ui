@@ -1,19 +1,26 @@
+@btn-text: @clprim1;
 .btn{
-  color: @clprim3;
-  background: @clprim2;
-  border: none;
-  border-radius: 24px;
-  display: inline-block;
-  min-width: 20px;
-  text-align: center;
+  color: @btn-text;
+  background: @clseca3;
+  border-radius: 4px;
+  border:       none;
+
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   font-family: 'Quicksand';
-  font-weight: bold;
-  padding: 1px 7px 4px 7px;
+  padding: 3px;
   &:hover{
     background: lighten(@clseca3, 10%);
   }
-}
 
+  .icon, .icon-16, .icon-24, .icon-32, .icon-48{
+    svg{
+      fill: @btn-text;
+    }
+  }
+}
 
 .btn-small{
   .btn;
