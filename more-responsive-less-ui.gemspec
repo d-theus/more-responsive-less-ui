@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'version'
+require 'more_responsive_less_u_i/rails/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "more-responsive-less-ui"
-  spec.version       = MoreResponsiveLessUI::VERSION
+  spec.name          = "more_responsive_less_u_i-rails"
+  spec.version       = MoreResponsiveLessUI::Rails::VERSION
   spec.authors       = ["d-theus"]
   spec.email         = ["slma0x02@gmail.com"]
   spec.summary       = %q{Simple and responsive web ui framework}
