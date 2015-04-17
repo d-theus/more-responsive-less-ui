@@ -2,5 +2,5 @@ require "version"
 require "more-responsive-less-ui/engine"
 
 module MoreResponsiveLessUI
-  I_AM_DEFINED
+  I_AM_DEFINED = true
 end
