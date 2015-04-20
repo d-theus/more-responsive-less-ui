@@ -1,0 +1,60 @@
+@screen-height: 380px;
+
+.spl2{
+  width: 50%;
+}
+
+.spl3{
+  width: 33.3333%;
+}
+
+.spl4{
+  width: 25%;
+}
+
+.tiles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+}
+
+.tile-row{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.tile{
+  margin: 0px;
+  padding: 10px;
+}
+
+.screen {
+  height: @screen-height;
+}
+
+.primary{
+  background: @clprim3;
+  a,p,span,h1,h2,h3,h4,h5,h6{
+    color: @clprim1;
+  }
+}
+
+.alt1{
+  background: @clseca3;
+  a,p,span,h1,h2,h3,h4,h5,h6{
+    color: @clseca1;
+  }
+}
+
+.alt2{
+  background: @clsecb3;
+  a,p,span,h1,h2,h3,h4,h5,h6{
+    color: @clsecb1;
+  }
+}
