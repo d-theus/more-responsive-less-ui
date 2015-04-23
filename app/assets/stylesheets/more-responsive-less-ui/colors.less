@@ -1,0 +1,81 @@
+@_color-primary:   #59509b;
+@_color-secondary: #dfc462;
+
+@color-header: @_color-primary;
+@color-link: @_color-primary;
+@color-text: #5A5A5A;
+@color-code: #5A5A5A;
+
+@color-body-background: white;
+@color-header-background: @color-body-background;
+@color-header-text: @_color-primary;
+@color-header-border:     @color-body-background - #222;
+
+@color-form-background: @color-body-background;
+@color-form-input-background: @color-form-background - #222;
+@color-form-input-text: @color-text;
+
+@color-btn-text: @_color-primary;
+@color-btn-background: @_color-secondary;
+
+body{
+  color: @color-text;
+  background: @color-body-background;
+
+}
+
+.btn{
+  color: @color-btn-text;
+  background: @color-btn-background;
+}
+
+.toggle{
+  color: @_color-primary;
+}
+
+
+header{
+  background: @color-header-background;
+  border-color: @color-header-border;
+  nav{
+    ul>li{
+      background: @color-header-background;
+      span,a,p {
+        color: @color-header-text;
+      }
+    }
+    ul>li:hover{
+      background: @color-header-text;
+      span,a,p {
+        color: @color-header-background;
+      }
+    }
+  }
+
+}
+
+footer{
+  background: @color-header-background;
+  border-color: @color-header-border;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: @color-header;
+}
+
+code{
+  color: @color-code;
+}
+
+article {
+  a {
+    color: lighten(@color-text, 10%);
+  }
+}
+
+form{
+  input{
+    background: @color-form-input-background;
+    color: @color-form-input-text;
+  }
+}

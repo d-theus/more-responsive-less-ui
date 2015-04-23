@@ -1,8 +1,4 @@
-@btn-text: @clprim1;
 .btn{
-  color: @btn-text;
-  background: @clseca3;
-  border-radius: 4px;
   border:       none;
 
   display: inline-flex;
@@ -12,14 +8,10 @@
   font-family: 'Quicksand';
   padding: 3px;
   &:hover{
-    background: lighten(@clseca3, 10%);
+    color: black;
   }
 
-  .icon, .icon-16, .icon-24, .icon-32, .icon-48{
-    svg{
-      fill: @btn-text;
-    }
-  }
+  transition: color 0.1s;
 }
 
 .btn-small{
@@ -31,9 +23,4 @@
 
 .btn-bold{
   font-weight: bold;
-}
-
-.btn-danger{
-  color: @clprim4;
-  background: @clprim3;
 }

@@ -1,0 +1,41 @@
+@import 'collapse.less';
+
+header{
+  display: flex;
+  position: relative;
+
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: nowrap;
+
+  .logo{
+    flex-grow: 100;
+    display: inline-block;
+  }
+
+  nav {
+    flex-grow: 1;
+    display: flex;
+    align-content: flex-end;
+    align-items: center;
+    ul {
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+      li{
+        margin: 0 5px;
+        padding: 0;
+        display: flex;
+        padding: 0 3px;
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

@@ -2,10 +2,6 @@
   @media(min-width: @media-bp){
     flex-direction: row-reverse;
     .toggle { visibility: hidden }
-    * :not(.toggle){
-      margin-left: 5px;
-      margin-right: 5px;
-    }
   }
 
   @media (max-width: @media-bp) and (min-width: 480px),
@@ -35,8 +31,9 @@
         position: relative;
         width: 100%;
         min-height: @header-height;
+        margin-left: 0px;
         left: 0px;
-        border-bottom: 1px solid @clprim2;
+        border-bottom: 1px solid @color-header-text;
       }
     }
   }
@@ -48,7 +45,7 @@
   }
 
   .rotated{
-    transform-origin: 50% 50%;
+    transform-origin: 75% 75%;
     animation: rotate 0.1s ease-in-out forwards;
   }
 }

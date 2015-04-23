@@ -3,8 +3,6 @@
   visibility: hidden;
   z-index: 100;
 
-  background: @clprim1;
-  border: 1px solid @clprim2;
   border-radius: 4px;
   border-top-left-radius: 0px;
 
@@ -18,7 +16,6 @@
       position: relative;
 
       list-style: none;
-      border-bottom: 1px solid lighten(@clprim2, 10);
       &:last-of-type{ border-bottom: none }
       a{
         width: 100%;
@@ -30,12 +27,6 @@
         flex-wrap: nowrap;
 
         padding: 3px;
-
-        &:hover{
-          color: @clprim1;
-          background: @text;
-          svg { fill: @clprim1 }
-        }
       }
     }
 
