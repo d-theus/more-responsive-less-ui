@@ -11,7 +11,14 @@ header{
 
   .logo{
     flex-grow: 100;
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: row;
+    align-content: flex-start;
+    img{
+      margin: 0;
+      padding: 0;
+      height: @height-navbar;
+    }
   }
 
   nav {
@@ -28,14 +35,22 @@ header{
       justify-content: space-between;
       align-items: stretch;
       li{
-        margin: 0 5px;
+        margin: 0 2px;
         padding: 0;
         display: flex;
         padding: 0 3px;
         list-style: none;
         align-items: center;
         justify-content: center;
+
+        a{
+          padding: 3px;
+        }
       }
     }
+  }
+
+  * {
+    transition: color 0.1s;
   }
 }

@@ -40,15 +40,14 @@ header{
   nav{
     ul>li{
       background: @color-header-background;
-      span,a,p {
-        color: @color-header-text;
-      }
     }
-    ul>li:hover{
+    ul>li>a{
+      background: @color-header-background;
+      color: @color-header-text;
+    }
+    ul>li>a:hover{
       background: @color-header-text;
-      span,a,p {
-        color: @color-header-background;
-      }
+      color: @color-header-background;
     }
   }
 

@@ -10,6 +10,9 @@
     align-items: center;
     .toggle {
       visibility: visible;
+      &:hover{
+        cursor: pointer;
+      }
     }
 
     .collapses {
@@ -34,6 +37,13 @@
         margin-left: 0px;
         left: 0px;
         border-bottom: 1px solid @color-header-text;
+        a {
+          position: relative;
+          width: 100%;
+          text-align: center;
+          line-height: @header-height;
+          height: @header-height;
+        }
       }
     }
   }
