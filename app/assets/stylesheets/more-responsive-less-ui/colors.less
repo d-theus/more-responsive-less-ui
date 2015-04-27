@@ -25,6 +25,11 @@
 @color-modal-background: @color-body-background;
 @color-modal-border: @_color-primary;
 
+@color-flash-alert-background: #ff0000;
+@color-flash-alert-text:       white;
+@color-flash-notice-background:@_color-primary;
+@color-flash-notice-text:      @_color-secondary;
+
 body{
   color: @color-text;
   background: @color-body-background;
@@ -104,4 +109,14 @@ form{
 
 .modal{
   background: @color-modal-background;
+}
+
+.notice{
+  background: @color-flash-notice-background;
+  color:      @color-flash-notice-text;
+}
+
+.alert{
+  background: @color-flash-alert-background;
+  color:      @color-flash-alert-text;
 }

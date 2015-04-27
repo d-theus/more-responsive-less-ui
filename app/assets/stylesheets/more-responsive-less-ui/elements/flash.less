@@ -1,0 +1,48 @@
+.flash{
+  &:before{
+    font-weight: bold;
+  }
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 0px;
+  height: @height-navbar;
+  width: 100%;
+  text-align: center;
+  line-height: @height-navbar;
+  font-size:   @height-navbar * 0.4;
+
+  opacity: 0.6;
+
+  transform-origin: 50% 0;
+  animation-name: flash;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.3s;
+  animation-delay: 3s;
+}
+
+@keyframes flash{
+  from{}
+  1%{
+    &:before{ opacity: 0; }
+  }
+  to{
+    &:before{ opacity: 0; }
+    transform: scaleX(0);
+  }
+}
+
+.notice{
+  .flash;
+  &:before{
+    content: 'NOTICE: ';
+  }
+}
+
+.alert{ 
+  .flash;
+  &:before{
+    content: 'ALERT: ';
+  }
+}
