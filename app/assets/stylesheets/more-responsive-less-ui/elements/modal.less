@@ -1,0 +1,39 @@
+.modal{
+  position: fixed;
+
+  opacity: 0;
+  top: 105%;
+
+  left: 25%;
+
+  border: solid 1px @color-modal-border;
+
+  .modal-header{
+    background: @color-modal-border;
+    position: relative;
+    height: 18px;
+    a, span {
+      color: @color-modal-background;
+    }
+    display: flex;
+    flex-direction: row-reverse;
+    .flaticon:before{
+      font-size: 15px;
+      line-height: 18px;
+    }
+    .toggle{
+      cursor: pointer;
+    }
+  }
+}
+
+.modal.opened{
+  z-index: 999;
+  opacity: 1;
+  top: 25%;
+  filter: none;
+}
+
+.blur{
+  filter: blur(2px) grayscale(50%) invert(0.1);
+}

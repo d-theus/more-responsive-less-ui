@@ -18,10 +18,20 @@
 @color-btn-text: @_color-primary;
 @color-btn-background: @_color-secondary;
 
+@color-contextmenu-border: @_color-primary;
+@color-contextmenu-background: @color-body-background;
+@color-contextmenu-text: @_color-primary;
+
+@color-modal-background: @color-body-background;
+@color-modal-border: @_color-primary;
+
 body{
   color: @color-text;
   background: @color-body-background;
 
+  a {
+    color: @color-text;
+  }
 }
 
 .btn{
@@ -77,4 +87,21 @@ form{
     background: @color-form-input-background;
     color: @color-form-input-text;
   }
+}
+
+.context-menu{
+  background: @color-contextmenu-background;
+  a {
+    color: @color-contextmenu-text;
+    background: @color-contextmenu-background;
+  }
+
+  a:hover{
+    background: @color-contextmenu-text;
+    color: @color-contextmenu-background;
+  }
+}
+
+.modal{
+  background: @color-modal-background;
 }
