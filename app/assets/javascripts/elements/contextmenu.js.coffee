@@ -1,19 +1,34 @@
 ready = () ->
-  menus = document.getElementsByClassName('context-menu')
+  contexts = document.querySelectorAll('[data-context-menu]')
+  menus = document.querySelectorAll('.context-menu')
+
   Array::.forEach.call menus, (menu)->
-    context_id = menu.dataset.context
-    context    = document.getElementById(context_id)
+    menu.attachTo = (context) ->
+      context.onclick = (e)->
+        this.open(e.pageX, e.pageY)
+        e.stopPropagation()
+    menu.open = (x,y)->
+      closeAllMenus()
+      this.style.top = "#{y}px"
+      this.style.left = "#{x}px"
+      this.classList.add('opened')
+    menu.close = ->
+      this.classList.remove('opened')
+    menu.onclick = close
+
+  Array::.forEach.call contexts, (context)->
+    menu = document.querySelector(context.getAttribute('data-context-menu'))
     context.onclick = (e)->
-      menu.style.top = "#{e.pageY}px"
-      menu.style.left = "#{e.pageX}px"
-      menu.classList.add('opened')
+      menu.open(e.pageX, e.pageY)
       e.stopPropagation()
 
-    menu.onclick = (e)->
+  $(window).on 'click', ->
+    closeAllMenus()
+
+  closeAllMenus = ->
+    Array::.forEach.call menus, (menu)->
       menu.classList.remove('opened')
 
-    $(window).on 'click', ->
-      menu.classList.remove('opened')
 
 $(document).on 'page:load', ready
 $(document).ready ready
