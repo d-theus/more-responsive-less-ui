@@ -1,8 +1,10 @@
 @import 'collapse.less';
 
-header{
+.navbar{
+  width: 100%;
   display: flex;
   position: relative;
+  height: @header-height;
 
   flex-direction: row;
   justify-content: space-between;
@@ -52,5 +54,32 @@ header{
 
   * {
     transition: color 0.1s;
+  }
+}
+
+.navbar-center{
+  .navbar;
+  justify-content: center;
+  nav {
+    justify-content: center;
+  }
+}
+
+.navbar-aside{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 10vw;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  z-index: 10;
+
+  align-items: center;
+  justify-content: space-around;
+
+  .logo{
+    height: 10vw;
   }
 }
