@@ -1,0 +1,11 @@
+.rolled-down{
+  visibility: visible !important;
+  height: auto !important;
+  transform-origin: 50% 0vh;
+  animation: rollDown 0.1s ease-in-out forwards;
+}
+
+@keyframes rollDown{
+  from { transform: scaleY(0) }
+  to   { transform: scaleY(1) }
+}

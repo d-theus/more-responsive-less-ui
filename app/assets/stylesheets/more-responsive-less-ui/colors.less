@@ -11,6 +11,9 @@
 @color-header-text: @_color-primary;
 @color-header-border:     @color-body-background - #222;
 
+@color-nav-background:  @color-header-background;
+@color-nav-text:        @color-header-text;
+
 @color-form-background: @color-body-background;
 @color-form-input-background: @color-form-background - #222;
 @color-form-input-text: @color-text;
@@ -42,42 +45,6 @@ body{
   }
 }
 
-.btn{
-  color:      @color-btn-text;
-  background: @color-btn-background;
-  &:hover{
-  color:      @color-btn-background;
-  background: @color-btn-text;
-  }
-}
-
-.toggle{
-  color: @_color-primary;
-}
-
-
-.navbar, .navbar-aside{
-  background: @color-header-background;
-  border-color: @color-header-border;
-  a,span,h1,h2,h3,h4,h5,h6{
-    color:        @color-header-text;
-  }
-  nav{
-    ul>li{
-      background: @color-header-background;
-    }
-    ul>li>a{
-      background: @color-header-background;
-      color: @color-header-text;
-    }
-    ul>li>a:hover{
-      background: @color-header-text;
-      color: @color-header-background;
-    }
-  }
-
-}
-
 h1,h2,h3,h4,h5,h6 {
   color: @color-header;
 }
@@ -90,38 +57,4 @@ article {
   a {
     color: lighten(@color-text, 10%);
   }
-}
-
-form{
-  input{
-    background: @color-form-input-background;
-    color: @color-form-input-text;
-  }
-}
-
-.context-menu{
-  background: @color-contextmenu-background;
-  a {
-    color: @color-contextmenu-text;
-    background: @color-contextmenu-background;
-  }
-
-  a:hover{
-    background: @color-contextmenu-text;
-    color: @color-contextmenu-background;
-  }
-}
-
-.modal{
-  background: @color-modal-background;
-}
-
-.notice{
-  background: @color-flash-notice-background;
-  color:      @color-flash-notice-text;
-}
-
-.alert{
-  background: @color-flash-alert-background;
-  color:      @color-flash-alert-text;
 }

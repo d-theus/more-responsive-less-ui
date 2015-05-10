@@ -1,71 +1,54 @@
+@import '../mixins/rolleddown.less';
+
+@height-toggle: 0.75in;
+@height-li:     1in;
+
 .collapse{
-  @media(min-width: @media-bp){
-    flex-direction: row-reverse;
-    .toggle { visibility: hidden }
+  flex-direction: row;
+
+  @media (min-width: @media-sm){
+    .toggle{
+      visibility: hidden;
+    }
   }
 
-  @media (max-width: @media-bp) and (min-width: 480px),
-  (max-device-width: 8in){
-    flex-direction: row;
-    align-items: center;
+  @media (max-width: @media-sm) and (min-width: 0),
+  (max-device-width: @media-xs){
+    height: 100%;
     .toggle {
-      visibility: visible;
-      &:hover{
-        cursor: pointer;
-      }
+      &:hover{ cursor: pointer; }
+      color: @_color-primary;
+      transform-origin: 50% 50%;
+      height: @height-toggle;
+      line-height: @height-toggle;
     }
 
     .collapses {
       visibility: hidden;
-
       position: absolute;
-      top: @header-height;
-      width: 100%;
-      left: 0px;
-      margin: 0px;
-      padding: 0px;
-      flex-direction: column;
-
-      float: none;
+      top: @height-toggle;
+      left: 0;
+      height: 0;
+      width: 100vw;
       z-index: 100;
-
+      display: block;
       li,div:not(.toggle){
-        padding: 0px 10px;
+        display: block;
         position: relative;
-        width: 100%;
-        min-height: @header-height;
-        margin-left: 0px;
-        left: 0px;
-        border-bottom: 1px solid @color-header-text;
+        margin:  0;
+        padding: 0;
+        border-bottom: 1px solid @_color-primary;
         a {
-          position: relative;
-          width: 100%;
+          height: @height-li;
+          display: table-cell;
+          width: 100vw;
+          margin:  0;
+          padding: 0;
           text-align: center;
-          line-height: @header-height;
-          height: @header-height;
+          vertical-align: middle;
         }
       }
     }
   }
-
-  .rolled-down{
-    visibility: visible;
-    transform-origin: 50% 0;
-    animation: rollDown 0.1s ease-in-out forwards;
-  }
-
-  .rotated{
-    transform-origin: 75% 75%;
-    animation: rotate 0.1s ease-in-out forwards;
-  }
 }
 
-@keyframes rollDown{
-  from { transform: scaleY(0) }
-  to   { transform: scaleY(1) }
-}
-
-@keyframes rotate{
-  from { }
-  to {   transform: rotate(-90deg) }
-}

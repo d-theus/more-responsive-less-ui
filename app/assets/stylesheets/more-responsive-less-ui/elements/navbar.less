@@ -1,18 +1,16 @@
 @import 'collapse.less';
+@height-navbar: 96px;
 
 .navbar{
-  width: 100%;
   display: flex;
   position: relative;
-  height: @header-height;
-
-  flex-direction: row;
   justify-content: space-between;
-  align-items: stretch;
-  flex-wrap: nowrap;
 
+  background: @color-header-background;
+              *{
+                color:      @color-header-text;
+              }
   .logo{
-    flex-grow: 100;
     display: inline-flex;
     flex-direction: row;
     align-content: flex-start;
@@ -23,63 +21,9 @@
     }
   }
 
-  nav {
-    flex-grow: 1;
-    display: flex;
-    align-content: flex-end;
-    align-items: center;
-    ul {
-      height: 100%;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: stretch;
-      li{
-        margin: 0 2px;
-        padding: 0;
-        display: flex;
-        padding: 0 3px;
-        list-style: none;
-        align-items: center;
-        justify-content: center;
-
-        a{
-          padding: 3px;
-        }
-      }
-    }
-  }
-
   * {
     transition: color 0.1s;
   }
-}
 
-.navbar-center{
-  .navbar;
-  justify-content: center;
-  nav {
-    justify-content: center;
-  }
-}
-
-.navbar-aside{
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 10vw;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  z-index: 10;
-
-  align-items: center;
-  justify-content: space-around;
-
-  .logo{
-    height: 10vw;
-  }
+  a:hover { cursor: pointer;}
 }

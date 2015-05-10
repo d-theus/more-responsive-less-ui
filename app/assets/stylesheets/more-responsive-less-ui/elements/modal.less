@@ -4,14 +4,23 @@
   opacity: 0;
   top: 105%;
 
-  left: 25%;
+  @media(max-width: @media-xs){
+    max-width: 100vw;
+    left: 0;
+  }
+
+  @media(min-width: @media-xs){
+    max-width: 80vw;
+    left: 10vw;
+  }
 
   border: solid 1px @color-modal-border;
+  background: @color-modal-background;
 
   .modal-header{
     background: @color-modal-border;
     position: relative;
-    height: 18px;
+    min-height: 18px;
     a, span {
       color: @color-modal-background;
     }
@@ -23,6 +32,13 @@
     }
     .toggle{
       cursor: pointer;
+    }
+  }
+  .modal-content{
+    position: relative;
+    overflow: hidden;
+    @media(min-width: @media-sm){
+      padding: 0.3in;
     }
   }
 }

@@ -1,15 +1,15 @@
+@import '../mixins/color-hover.less';
+
 .btn{
   border:       none;
-
   display: inline-flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   font-family: 'Quicksand';
   padding: 3px;
-  &:hover{
-    cursor: pointer;
-  }
+  .color-hover(@_color-primary, @_color-secondary);
+  &:hover{ cursor: pointer; }
 
   transition: color 0.1s;
 }

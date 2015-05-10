@@ -1,0 +1,15 @@
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.col(@width, @media-min: @media-sm, @media-max: @media-lg){
+  display: flex;
+  flex-direction: column;
+  width: @width;
+}

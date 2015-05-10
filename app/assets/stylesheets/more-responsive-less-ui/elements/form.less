@@ -1,23 +1,27 @@
+input{
+  display: inline-block;
+  border: none;
+  margin-top: 10px;
+  padding-left: 10px;
+  background: @color-form-input-background;
+  color: @color-form-input-text;
+}
+
+.input {
+  &:not(.boolean){
+    label { display: none}
+  }
+}
+
+input[type="submit"]{
+  .btn
+}
+
+input[type="checkbox"]{
+  height: 12px;
+  width: 12px;
+}
+
 form{
-  input{
-    border: none;
-    margin-top: 10px;
-    padding-left: 10px;
-
-  }
-
-  .input {
-    &:not(.boolean){
-      label { display: none}
-    }
-  }
-
-  input[type="submit"]{
-    .btn
-  }
-
-  input[type="checkbox"]{
-    height: 12px;
-    width: 12px;
-  }
+  overflow: hidden;
 }

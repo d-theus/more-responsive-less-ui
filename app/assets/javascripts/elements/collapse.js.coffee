@@ -1,12 +1,23 @@
 ready = ()->
-  toggles = document.getElementsByClassName('toggle')
-  Array.prototype.forEach.call(toggles, (t)->
-    collapse_id = t.dataset.collapse
-    collapse = document.getElementById(collapse_id)
+  rolldown = ->
+    @classList.add('rolled-down')
+    @rolleddown = true
+
+  rollup  = ->
+    @classList.remove('rolled-down')
+    @rolleddown = false
+
+  collapses = document.getElementsByClassName('collapse')
+  Array::forEach.call(collapses, (collapse)->
+    c = collapse.getElementsByClassName('collapses')[0]
+    t = collapse.getElementsByClassName('toggle')[0]
+    return unless t?
+    c.rolldown = rolldown
+    c.rollup   = rollup
     t.onclick = ->
-        $(collapse).toggleClass('rolled-down')
-        $(t).toggleClass('rotated')
+      if c.rolleddown then c.rollup() else c.rolldown()
   )
+
 
 $(document).on 'page:load', ready
 $(document).ready ready
