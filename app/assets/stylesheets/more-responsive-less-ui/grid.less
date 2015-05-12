@@ -1,0 +1,48 @@
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items:    stretch;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+}
+
+.generate-columns(1, 12, @media-hh, hh);
+.generate-columns(1, 12, @media-sm, sm);
+.generate-columns(1, 12, @media-md, md);
+.generate-columns(1, 12, @media-lg, lg);
+
+.generate-push(1, 12, @media-hh, hh);
+.generate-push(1, 12, @media-sm, sm);
+.generate-push(1, 12, @media-md, md);
+.generate-push(1, 12, @media-lg, lg);
+
+.generate-columns(@i: 1, @n, @med, @name) when (@i =< @n) {
+  .col-@{name}-@{i} {
+    @media(min-width: @med) {
+      width: ( @i * 100% / @n);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .generate-columns((@i + 1), @n, @med, @name);
+}
+
+.generate-push(@i, @n, @med, @name) when (@i =< @n){
+  .push-@{name}-@{i}{
+    @media(min-width: @med) {
+      margin-left: (@i * 100% / @n);
+    }
+  }
+  .generate-push((@i + 1),@n , @med, @name);
+}

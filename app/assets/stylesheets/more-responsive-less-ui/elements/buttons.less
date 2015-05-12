@@ -7,11 +7,15 @@
   justify-content: space-around;
   align-items: center;
   font-family: 'Quicksand';
+  font-size: @font-size-button;
   padding: 3px;
   .color-hover(@_color-primary, @_color-secondary);
   &:hover{ cursor: pointer; }
 
   transition: color 0.1s;
+  .flaticon:before{
+    font-size: @font-size-button;
+  }
 }
 
 .btn-small{
