@@ -1,0 +1,52 @@
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items:    stretch;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+}
+
+.generate-columns(1, 12, @media-hh-min, @media-hh-max, hh);
+.generate-columns(1, 12, @media-sm-min, @media-sm-max, sm);
+.generate-columns(1, 12, @media-md-min, @media-md-max, md);
+.generate-columns(1, 12, @media-lg-min, @media-lg-max, lg);
+
+.generate-push(1, 12, @media-hh-min, @media-hh-max, hh);
+.generate-push(1, 12, @media-sm-min, @media-sm-max, sm);
+.generate-push(1, 12, @media-md-min, @media-md-max, md);
+.generate-push(1, 12, @media-lg-min, @media-lg-max, lg);
+
+.col(@i, @n, @med-min, @med-max) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media(min-width: @med-min) and (max-width: @med-max) {
+      width: ( @i * 100% / @n);
+    }
+}
+
+.generate-columns(@i: 1, @n, @med-min, @med-max, @name) when (@i =< @n) {
+  .col-@{name}-@{i} {
+    .col(@i, @n, @med-min, @med-max);
+  }
+  .generate-columns((@i + 1), @n, @med-min, @med-max, @name);
+}
+
+.generate-push(@i, @n, @med-min, @med-max, @name) when (@i =< @n){
+  .push-@{name}-@{i}{
+    @media(min-width: @med-min) and (max-width: @med-max) {
+      margin-left: (@i * 100% / @n);
+    }
+  }
+  .generate-push((@i + 1),@n , @med-min, @med-max, @name);
+}

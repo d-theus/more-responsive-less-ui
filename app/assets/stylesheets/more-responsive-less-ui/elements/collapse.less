@@ -6,14 +6,13 @@
 .collapse{
   flex-direction: row;
 
-  @media (min-width: @media-sm){
+  @media (min-width: @media-md-min) and (max-width: @media-lg-max){
     .toggle{
       visibility: hidden;
     }
   }
 
-  @media (max-width: @media-sm) and (min-width: 0),
-  (max-device-width: @media-xs){
+  @media (min-width: @media-hh-min) (max-width: @media-sm-max){
     height: 100%;
     .toggle {
       &:hover{ cursor: pointer; }

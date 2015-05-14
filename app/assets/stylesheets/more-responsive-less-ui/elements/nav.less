@@ -13,6 +13,7 @@ nav{
   }
   ul>li>a{
     .color-hover(@color-nav-text, @color-nav-background);
+    cursor: pointer;
   }
 }
 
@@ -62,8 +63,8 @@ nav{
   }
 }
 
-.bg{
+.nobg{
   ul>li>a{
-    .color-hover(@color-nav-background, @color-nav-text);
+    .color-hover(@color-nav-text, transparent);
   }
 }

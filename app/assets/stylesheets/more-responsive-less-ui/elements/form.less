@@ -1,10 +1,28 @@
-input{
+.input{
   display: inline-block;
   border: none;
   margin-top: 10px;
   padding-left: 10px;
   background: @color-form-input-background;
   color: @color-form-input-text;
+}
+
+input{
+  .input;
+}
+
+select{
+  .input;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  vertical-align: middle;
+  text-align: center;
+  padding-left: 0px;
+  height: 1.35*@font-line-height;
+  option{
+    border: none;
+    padding: 0.2em 0;
+  }
 }
 
 .input {
@@ -21,6 +39,7 @@ input[type="checkbox"]{
   height: 12px;
   width: 12px;
 }
+
 
 form{
   overflow: hidden;

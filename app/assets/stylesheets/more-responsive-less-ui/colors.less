@@ -4,7 +4,8 @@
 @color-header: @_color-primary;
 @color-link: @_color-primary;
 @color-text: #5A5A5A;
-@color-code: #5A5A5A;
+@color-code: lighten(@_color-primary, 10%);
+@color-code-background: lighten(desaturate(@_color-secondary, 50%), 10%);
 
 @color-body-background: white;
 @color-header-background: @color-body-background;
@@ -36,6 +37,12 @@
 @color-search-background:      @color-form-input-background;
 @color-search-text:            @color-form-input-text;
 
+@color-tag-text:    @_color-primary;
+@color-tag-background: @_color-secondary;
+
+@color-panel-background: desaturate(@_color-secondary, 40%) + #222;
+@color-panel-text:       @_color-primary;
+
 body{
   color: @color-text;
   background: @color-body-background;
@@ -47,10 +54,6 @@ body{
 
 h1,h2,h3,h4,h5,h6 {
   color: @color-header;
-}
-
-code{
-  color: @color-code;
 }
 
 article {

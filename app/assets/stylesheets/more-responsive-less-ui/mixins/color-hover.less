@@ -1,8 +1,17 @@
 .color-hover(@fg, @bg){
-  color: @fg;
-  background: @bg;
-  &:hover{
-    color: @bg;
-    background: @fg;
+    color: @fg;
+    background: @bg;
+  & when not(@bg = transparent){
+    &:hover{
+      color: @bg;
+      background: @fg;
+    }
+  }
+
+  & when (@bg = transparent){
+    &:hover{
+      color: invert(@fg);
+      background: @fg;
+    }
   }
 }
