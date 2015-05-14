@@ -9,6 +9,8 @@ ready = () ->
       main.classList.add('blur') if main
       this.querySelector('.modal-content').innerHTML = content if content?
       this.classList.add('opened')
+    modal.loading = () ->
+      modal.open('<span class="flaticon flaticon-preloader"></span>')
     modal.close = ()->
       modal.querySelector('.modal-content').innerHTML = ''
       modal.classList.remove('opened')
