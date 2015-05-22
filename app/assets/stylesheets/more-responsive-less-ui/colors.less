@@ -4,8 +4,13 @@
 @color-header: @_color-primary;
 @color-link: @_color-primary;
 @color-text: #5A5A5A;
-@color-code: lighten(@_color-primary, 10%);
-@color-code-background: lighten(desaturate(@_color-secondary, 50%), 10%);
+@color-code: desaturate(@_color-primary, 10%);
+@color-code-keyword: @_color-primary;
+@color-code-value:   darken(@_color-secondary, 20%);
+@color-code-comment: saturate(@color-code-background, 15%);
+@color-code-background: lighten(desaturate(@_color-secondary, 50%), 20%);
+
+@color-danger: #cc1111;
 
 @color-body-background: white;
 @color-header-background: @color-body-background;
@@ -42,6 +47,9 @@
 
 @color-panel-background: desaturate(@_color-secondary, 40%) + #222;
 @color-panel-text:       @_color-primary;
+
+@color-dropdown-background: @color-body-background;
+@color-dropdown-text:       @_color-primary;
 
 body{
   color: @color-text;

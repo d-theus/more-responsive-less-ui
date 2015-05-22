@@ -1,50 +1,24 @@
-pre{
-  .row;
-  background: @color-code-background;
-  padding: 0;
+/*
 
-  .langspec{
-    background: @color-code;
-    .col(1,12, @media-sm-min, @media-lg-max);
-    .col(12,12, @media-hh-min, @media-hh-max);
-    .col-flex;
-    .col-align-center;
-    @media (min-width: @media-sm-min) and (max-width: @media-lg-max){
-      min-height: 8em;
-    }
-    @media (min-width: @media-hh-min) and (max-width: @media-hh-max){
-      min-height: 4em;
-    }
-    align-self: stretch;
-    justify-content: center;
-    color: @color-body-background;
-    .flaticon{
-      &:before{
-        color: @color-body-background;
-      }
-    }
-    .langname{
-      margin-top: 1em;
-      @media (min-width: @media-sm-min) and (max-width: @media-lg-max){
-        transform: rotate(-90deg);
-      }
-    }
-  }
-}
-code {
-  .col(11,12, @media-sm-min, @media-lg-max);
-  .col(1,1, @media-hh-min, @media-hh-max);
-  &.hljs{
-    .col(11,12, @media-sm-min, @media-lg-max);
-    .col(1,1, @media-hh-min, @media-hh-max);
-  }
+Colorbrewer theme
+Original: https://github.com/mbostock/colorbrewer-theme (c) Mike Bostock <mike@ocks.org>
+Ported by Fabrício Tavares de Oliveira
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #fff;
+  -webkit-text-size-adjust: none;
 }
 
 .hljs,
 .hljs-subst,
 .hljs-tag .hljs-title,
 .nginx .hljs-title {
-  color: @color-code-keyword;
+  color: #000;
 }
 
 .hljs-string,
@@ -55,7 +29,6 @@ code {
 .hljs-rule .hljs-value,
 .hljs-preprocessor,
 .hljs-pragma,
-.hljs-name,
 .haml .hljs-symbol,
 .ruby .hljs-symbol,
 .ruby .hljs-symbol .hljs-string,
@@ -66,7 +39,6 @@ code {
 .hljs-flow,
 .hljs-stream,
 .bash .hljs-variable,
-.pf .hljs-variable,
 .apache .hljs-tag,
 .apache .hljs-cbracket,
 .tex .hljs-command,
@@ -74,8 +46,9 @@ code {
 .erlang_repl .hljs-function_or_atom,
 .asciidoc .hljs-header,
 .markdown .hljs-header,
-.coffeescript .hljs-attribute {
-  color: @color-code-value;
+.coffeescript .hljs-attribute,
+.hljs-name {
+  color: #756bb1;
 }
 
 .smartquote,
@@ -85,7 +58,7 @@ code {
 .hljs-chunk,
 .asciidoc .hljs-blockquote,
 .markdown .hljs-blockquote {
-  color: #888;
+  color: #636363;
 }
 
 .hljs-number,
@@ -103,7 +76,7 @@ code {
 .markdown .hljs-bullet,
 .asciidoc .hljs-link_url,
 .markdown .hljs-link_url {
-  color: #080;
+  color: #31a354;
 }
 
 .hljs-label,
@@ -124,6 +97,7 @@ code {
 .hljs-shebang,
 .apache .hljs-sqbracket,
 .nginx .hljs-built_in,
+.hljs-list .hljs-built_in,
 .tex .hljs-formula,
 .erlang_repl .hljs-reserved,
 .hljs-prompt,
@@ -138,6 +112,8 @@ code {
   color: #88f;
 }
 
+
+
 .hljs-keyword,
 .hljs-id,
 .hljs-title,
@@ -150,7 +126,6 @@ code {
 .smalltalk .hljs-class,
 .hljs-winutils,
 .bash .hljs-variable,
-.pf .hljs-variable,
 .apache .hljs-tag,
 .hljs-type,
 .hljs-typename,
@@ -159,7 +134,7 @@ code {
 .markdown .hljs-strong,
 .hljs-request,
 .hljs-status {
-  font-weight: bold;
+  color: #3182bd;
 }
 
 .asciidoc .hljs-emphasis,
@@ -180,4 +155,15 @@ code {
 .xml .css,
 .xml .hljs-cdata {
   opacity: 0.5;
+}
+
+.css .hljs-attribute,
+.html .hljs-attribute {
+  color: #e6550d;
+}
+
+.css .hljs-class,
+.html .hljs-tag,
+.html .hljs-title {
+  color: #3182bd;
 }

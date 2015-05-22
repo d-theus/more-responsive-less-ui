@@ -4,6 +4,7 @@
   & when not(@bg = transparent){
     &:hover{
       color: @bg;
+      *{ color: @bg; }
       background: @fg;
     }
   }
@@ -11,7 +12,9 @@
   & when (@bg = transparent){
     &:hover{
       color: invert(@fg);
+      *{ color: invert(@fg); }
       background: @fg;
+      border: 1px solid invert(@fg);
     }
   }
 }

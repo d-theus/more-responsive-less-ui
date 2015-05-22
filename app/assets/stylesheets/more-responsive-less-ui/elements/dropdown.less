@@ -1,0 +1,46 @@
+.dropdown{
+  display: inline-block;
+  position: relative;
+  max-height: 1.2em;
+  overflow: visible;
+  span, a{
+    cursor: pointer;
+  }
+
+  .toggle{
+    .flaticon;
+    &:before{
+      font-size: 0.8em;
+      content: "▾";
+    }
+  }
+}
+
+.dropdown-menu{
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: @color-dropdown-background;
+  display: none;
+  border: 1px solid @color-dropdown-text;
+  border-top: none;
+  transform-origin: 50% 0;
+  flex-wrap: nowrap;
+  width: 100%;
+  z-index: 100;
+
+  &>ul, &>nav{
+    width: 100%;
+  }
+
+  &.opened{
+    display: flex;
+    animation: rollDown 0.1s ease-out forwards;
+  }
+}
+
+@keyframes rollDown {
+  from{ transform: scaleY(0); }
+  to  { transform: scaleY(1); }
+}

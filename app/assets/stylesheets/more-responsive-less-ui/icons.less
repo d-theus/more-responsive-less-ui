@@ -5,6 +5,7 @@
   font-style: normal;
 }
 .flaticon{
+  display: inline-block;
   &:before{
     font-family: 'Flaticon';
     font-size: 20px;
@@ -37,17 +38,17 @@
 }
 
 .flaticon-arrow-down{
+  transform-origin: 50% 50%;
+  transform: rotate(90deg);
   &:before {
     content: "\e001";
-    transform-origin: 50% 50%;
-    transform: rotate(90deg);
   }
 }
 .flaticon-arrow-up{
+  transform-origin: 50% 50%;
+  transform: rotate(-90deg);
   &:before {
     content: "\e001";
-    transform-origin: 50% 50%;
-    transform: rotate(-90deg);
   }
 }
 .flaticon-arrow-star{

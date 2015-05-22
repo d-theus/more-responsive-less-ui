@@ -18,13 +18,12 @@
   }
 }
 
-.btn-small{
+.btn-primary{
   .btn;
-  border-radius: 12px;
-  min-width: 21px;
-  padding: 0;
+  .color-hover(@_color-secondary, @_color-primary);
 }
 
-.btn-bold{
-  font-weight: bold;
+.btn-danger{
+  .btn;
+  .color-hover(white, @color-danger);
 }

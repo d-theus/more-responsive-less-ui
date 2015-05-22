@@ -2,26 +2,15 @@
   display: inline-block;
   border: none;
   margin-top: 10px;
-  padding-left: 10px;
+  margin-left: 0.5em;
   background: @color-form-input-background;
   color: @color-form-input-text;
 }
 
 input{
   .input;
-}
-
-select{
-  .input;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  vertical-align: middle;
-  text-align: center;
-  padding-left: 0px;
-  height: 1.35*@font-line-height;
-  option{
-    border: none;
-    padding: 0.2em 0;
+  &[type='text']{
+    padding-left: 0.5em;
   }
 }
 
@@ -36,11 +25,32 @@ input[type="submit"]{
 }
 
 input[type="checkbox"]{
-  height: 12px;
-  width: 12px;
+  height: 1em;
+  width: 1em;
 }
-
+.hh-1-sm-2{
+    .col(1,1,@media-hh-min, @media-hh-max);
+    .col(1,2,@media-sm-min, @media-lg-max);
+    @media (max-width: @media-hh-max){ .center; }
+    @media (min-width: @media-sm-min){ .pull-right; }
+}
+.formgroup{
+  .row;
+  label{
+    .hh-1-sm-2;
+  }
+  input{
+    .hh-1-sm-2;
+  }
+}
 
 form{
   overflow: hidden;
+}
+
+.select{
+  .input;
+}
+
+.select-option{
 }

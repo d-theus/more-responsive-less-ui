@@ -1,9 +1,12 @@
 @font-navbar: 'Quicksand';
 @font-size-button: 1em;
 @font-line-height: 1em;
+@font-family-code: 'Cutive Mono';
+@font-family-form-input: 'Quicksand Light';
 
 body {
   font-family: 'Quicksand';
+  font-size: 1em;
 
   h1, h2, h3, h4, h5, h6{
     font-family: 'Quicksand Light';
@@ -26,11 +29,20 @@ body {
 
   article{
     font-family: 'Libre Baskerville';
+    font-size:   1em;
     h1,h2,h3,h4,h5,h6 {
       font-style: normal;
     }
-    pre{
-      font-family: 'Cutive Mono';
-    }
   }
+}
+
+code{
+  font-family: @font-family-code;
+  font-size: 1.1em;
+  line-height: 1.0em;
+  span { background: none; }
+}
+
+.input{
+  font-family: @font-family-form-input;
 }

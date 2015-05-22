@@ -1,50 +1,20 @@
-pre{
-  .row;
-  background: @color-code-background;
-  padding: 0;
+/*
 
-  .langspec{
-    background: @color-code;
-    .col(1,12, @media-sm-min, @media-lg-max);
-    .col(12,12, @media-hh-min, @media-hh-max);
-    .col-flex;
-    .col-align-center;
-    @media (min-width: @media-sm-min) and (max-width: @media-lg-max){
-      min-height: 8em;
-    }
-    @media (min-width: @media-hh-min) and (max-width: @media-hh-max){
-      min-height: 4em;
-    }
-    align-self: stretch;
-    justify-content: center;
-    color: @color-body-background;
-    .flaticon{
-      &:before{
-        color: @color-body-background;
-      }
-    }
-    .langname{
-      margin-top: 1em;
-      @media (min-width: @media-sm-min) and (max-width: @media-lg-max){
-        transform: rotate(-90deg);
-      }
-    }
-  }
-}
-code {
-  .col(11,12, @media-sm-min, @media-lg-max);
-  .col(1,1, @media-hh-min, @media-hh-max);
-  &.hljs{
-    .col(11,12, @media-sm-min, @media-lg-max);
-    .col(1,1, @media-hh-min, @media-hh-max);
-  }
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+
+*/
+
+.hljs {
+  overflow-x: auto;
+  width: 100%;
+  -webkit-text-size-adjust: none;
 }
 
 .hljs,
 .hljs-subst,
 .hljs-tag .hljs-title,
 .nginx .hljs-title {
-  color: @color-code-keyword;
+  color: black;
 }
 
 .hljs-string,
@@ -75,7 +45,7 @@ code {
 .asciidoc .hljs-header,
 .markdown .hljs-header,
 .coffeescript .hljs-attribute {
-  color: @color-code-value;
+  color: #800;
 }
 
 .smartquote,
