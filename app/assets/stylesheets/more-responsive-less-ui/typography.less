@@ -1,16 +1,24 @@
 @font-navbar: 'Quicksand';
 @font-size-button: 1em;
 @font-line-height: 1em;
+@font-family-heading:   'Quicksand Light';
 @font-family-code: 'Cutive Mono';
 @font-family-form-input: 'Quicksand Light';
+@font-family-article:    'Libre Baskerville';
 
 body {
   font-family: 'Quicksand';
   font-size: 1em;
 
   h1, h2, h3, h4, h5, h6{
-    font-family: 'Quicksand Light';
+    font-family: @font-family-heading;
   }
+  h1 { font-size: 1.85em; }
+  h2 { font-size: 1.65em; }
+  h3 { font-size: 1.55em; }
+  h4 { font-size: 1.45em; }
+  h5 { font-size: 1.35em; }
+  h6 { font-size: 1.25em; }
 
   a {
     text-decoration: none;//
@@ -28,7 +36,7 @@ body {
   }
 
   article{
-    font-family: 'Libre Baskerville';
+    font-family: @font-family-article;
     font-size:   1em;
     h1,h2,h3,h4,h5,h6 {
       font-style: normal;
@@ -38,8 +46,6 @@ body {
 
 code{
   font-family: @font-family-code;
-  font-size: 1.1em;
-  line-height: 1.0em;
   span { background: none; }
 }
 

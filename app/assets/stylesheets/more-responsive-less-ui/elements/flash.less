@@ -1,18 +1,27 @@
 .flash{
   &:before{
     font-weight: bold;
+    margin-right: 0.3em;
   }
   position: absolute;
   top: 0px;
   left: 0px;
   margin: 0px;
-  height: @height-navbar;
+  min-height: @height-navbar;
+  z-index: 999;
   width: 100%;
-  text-align: center;
-  line-height: @height-navbar;
-  font-size:   @height-navbar * 0.4;
-
   opacity: 0.8;
+  display: flex;
+  @media(min-width: @media-hh-min) and (max-width: @media-sm-max){
+    flex-direction: column;
+  }
+  @media(min-width: @media-md-min) and (max-width: @media-lg-max){
+    flex-direction: row;
+  }
+  justify-content: center;
+  align-items:    center;
+
+  font-size: @height-navbar * 0.5;
 
   transform-origin: 50% 0;
   animation-name: flash;
@@ -36,7 +45,7 @@
 .notice{
   .flash;
   &:before{
-    content: 'NOTICE: ';
+    content: 'NOTICE:';
   }
   background: @color-flash-notice-background;
   color:      @color-flash-notice-text;
@@ -49,4 +58,8 @@
   }
   background: @color-flash-alert-background;
   color:      @color-flash-alert-text;
+}
+
+.flash.static{
+  position: relative;
 }

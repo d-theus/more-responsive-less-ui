@@ -1,15 +1,12 @@
 @import '../mixins/color-hover.less';
 
 nav{
+  display: flex;
   ul {
     list-style: none;
     padding: 0;
     display: flex;
-    li>a{
-      display:        flex;
-      align-items:    center;
-      padding:        0 3px;
-    }
+    margin:  0;
   }
   ul>li>a{
     .color-hover(@color-nav-text, @color-nav-background);
@@ -17,9 +14,9 @@ nav{
   }
 }
 
-.hor{
+nav.hor{
+  height: 100%;
   ul {
-    display:            inline-flex;
     flex-direction:     row;
     align-items:        center;
     justify-content:    space-between;
@@ -35,8 +32,11 @@ nav{
   }
 }
 
-.ver{
+nav.ver{
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   ul {
     margin: 0;
     flex-direction: column;

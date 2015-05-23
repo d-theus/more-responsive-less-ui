@@ -2,4 +2,4 @@
 #= require 'elements/contextmenu.js'
 #= require 'elements/modal.js'
 #= require 'elements/dropdown.js'
-#= require 'elements/highlight.pack.js'
+#= require 'elements/code.js'
