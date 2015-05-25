@@ -1,0 +1,35 @@
+@keyframes rolledUp{
+  from{}
+  1%{
+    &:before{ opacity: 0; }
+  }
+  to{
+    &:before{ opacity: 0; }
+    transform: scaleY(0);
+  }
+}
+@-webkit-keyframes rolledUp{
+  from{}
+  1%{
+    &:before{ opacity: 0; }
+  }
+  to{
+    &:before{ opacity: 0; }
+    transform: scaleY(0);
+  }
+}
+
+.rolled-up{
+  transform-origin: 50% 0;
+  animation-name: rolledUp;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.2s;
+  animation-delay: 3s;
+  -webkit-transform-origin: 50% 0;
+  -webkit-animation-name: rolledUp;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 0.2s;
+  -webkit-animation-delay: 3s;
+}

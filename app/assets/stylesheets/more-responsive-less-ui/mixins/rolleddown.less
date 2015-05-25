@@ -1,11 +1,18 @@
+@keyframes rolledDown{
+  from { transform: scaleY(0) }
+  to   { transform: scaleY(1) }
+}
+
+@-webkit-keyframes rolledDown{
+  from { transform: scaleY(0) }
+  to   { transform: scaleY(1) }
+}
+
 .rolled-down{
   visibility: visible !important;
   height: auto !important;
-  transform-origin: 50% 0vh;
+  transform-origin: 50% 0;
+  -webkit-transform-origin: 50% 0;
   animation: rollDown 0.1s ease-in-out forwards;
-}
-
-@keyframes rollDown{
-  from { transform: scaleY(0) }
-  to   { transform: scaleY(1) }
+  -webkit-animation: rolledDown 0.1s ease-in-out forwards;
 }

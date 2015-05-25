@@ -1,0 +1,27 @@
+@keyframes rolledRight{
+  from {
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes rolledRight{
+  from {
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+  }
+}
+.rolled-right{
+  transform-origin: 0 50%;
+  -webkit-transform-origin: 0 50%;
+  animation: rolledRight 0.05s ease-out forwards;
+  -webkit-animation: rolledRight 0.05s ease-out forwards;
+}

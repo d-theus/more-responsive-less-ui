@@ -59,12 +59,7 @@
   }
 }
 
-@keyframes slideRight{
-  from { transform: scaleX(0) }
-  to { transform: scaleX(1) }
-}
 .context-menu.opened{
   visibility: visible;
-  transform-origin: 0 50%;
-  animation: slideRight 0.05s ease-out forwards;
+  .rolled-right;
 }
