@@ -32,6 +32,6 @@ input[type="checkbox"]{
 .hh-1-sm-2{
     .col(1,1,@media-hh-min, @media-hh-max);
     .col(1,2,@media-sm-min, @media-lg-max);
-    @media (max-width: @media-hh-max){ .center; }
-    @media (min-width: @media-sm-min){ .pull-right; }
+    @media (max-width: @media-hh-max){ align-items: center; }
+    @media (min-width: @media-sm-min){ align-items: flex-start; }
 }

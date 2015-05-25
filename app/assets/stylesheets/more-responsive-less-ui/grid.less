@@ -52,35 +52,46 @@
   flex-direction: column;
 }
 
-.col-align-left{
+.col-left{
+  .col-flex;
   align-items: flex-start;
 }
 
-.col-align-right{
+.col-right{
+  .col-flex;
   align-items: flex-end;
 }
 
-.col-align-center{
+.col-center{
+  .col-flex;
   align-items: center;
 }
 
-.pull-right{
-  align-items: flex-end;
+.row-middle{
+  .row;
+  align-items: center;
 }
 
-.pull-left{
+.row-top{
+  .row;
   align-items: flex-start;
 }
 
-.center{
-  align-items: center;
+.row-bottom{
+  .row;
+  align-items: flex-end;
+}
+
+.row-stretch{
+  .row;
+  align-items: stretch;
 }
 
 .generate-columns(@i: 1, @n, @med-min, @med-max, @name) when (@i =< @n) {
   .col-@{name}-@{i} {
     .col(@i, @n, @med-min, @med-max);
     .col-flex;
-    .col-align-left;
+    .col-left;
   }
   .generate-columns((@i + 1), @n, @med-min, @med-max, @name);
 }
