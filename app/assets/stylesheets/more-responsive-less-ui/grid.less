@@ -1,3 +1,4 @@
+@width-gutter: 2%;
 .container{
   position: relative;
   width: 100%;
@@ -16,7 +17,7 @@
 
   width: 100%;
 
-  margin-bottom: 0.5em;
+  margin-bottom: 2*@width-gutter;
 }
 
 .generate-columns(1, 12, @media-hh-min, @media-hh-max, hh);
@@ -43,13 +44,14 @@
 
 .col(@i, @n, @med-min, @med-max) {
     @media(min-width: @med-min) and (max-width: @med-max) {
-      width: ( (@i - 0.1) * 100% / @n);
+      width: @i * 100% / @n - 2*@width-gutter;
     }
 }
 
 .col-flex{
   display: flex;
   flex-direction: column;
+  min-height: 1px;
 }
 
 .col-left{
